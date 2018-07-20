@@ -53,6 +53,12 @@ export const cursorContainerMixin = (base) => class VictoryCursorContainer exten
         },
         onTouchMove: (evt, targetProps) => {
           return props.disable ? {} : CursorHelpers.onMouseMove(evt, targetProps);
+        },
+        onTouchStart: (evt, targetProps) => {
+          return props.disable ? {} : CursorHelpers.onTouchStart(evt, targetProps);
+        },
+        onTouchEnd: (evt, targetProps) => {
+          return props.disable ? {} : CursorHelpers.onTouchEnd(evt, targetProps);
         }
       }
     }];
